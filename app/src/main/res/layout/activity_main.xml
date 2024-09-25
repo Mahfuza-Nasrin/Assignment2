@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="18dp">
+
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/plant_icon"
+        android:src="@drawable/img"
+        android:layout_gravity="center"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your Plant name:"
+        android:id="@+id/tv_plantName"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/et_plant_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Aloe Vera"
+        android:minHeight="25dp"
+        tools:ignore="VisualLintTextFieldSize,TouchTargetSizeCheck" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="select plant environment"
+        android:id="@+id/tb_select_care_environment"/>
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radio_indoor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Indoor" />
+        <RadioButton
+            android:id="@+id/radio_outdoor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Outdoor" />
+
+    </RadioGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="select care tasks"
+        android:id="@+id/tb_select_care_task"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <CheckBox
+        android:id="@+id/checkbox_watering"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Watering" />
+
+    <CheckBox
+        android:id="@+id/checkbox_fertilizing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fertilizing" />
+
+    <CheckBox
+        android:id="@+id/checkbox_pruning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pruning"
+        />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="set watering frequency days"
+        android:id="@+id/tv_set_watering_frequency_day"
+        android:layout_marginTop="20dp"/>
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="30" />
+    <TextView
+        android:id="@+id/watering_frequency_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Watering Frequency: 15 days"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="enable/disable notifications"
+        android:id="@+id/tb_enable_notification"
+        android:layout_marginTop="5dp"/>
+
+    <Switch
+        android:id="@+id/switch_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+    <TextView
+        android:id="@+id/switch_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notification is Enabled!"
+        android:layout_marginBottom="20dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rate plant health"
+        android:id="@+id/tv_rate_plant"/>
+    <RatingBar
+        android:id="@+id/rating_bar_health"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="4"
+        android:stepSize="1"
+        android:backgroundTint="#113C01"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plant health conditon:"
+        android:id="@+id/tv_healthCondition"
+        android:layout_marginBottom="20dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/btn_layout">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:id="@+id/btn_save"
+            android:backgroundTint="#2D4E23"/>
+
+    </LinearLayout>
+
+</LinearLayout>
